@@ -32,6 +32,8 @@ def startmanaging():
 
         if os.path.exists(filepath + '/' + extension):
             shutil.move(filepath + '/' + file, filepath + '/' + extension + '/' + file)
+            lvl3 = Label(root,text = "Done!")
+            lvl3.place(x=180,y=130)
         else:
             os.makedirs(filepath + '/' + extension)
             shutil.move(filepath + '/' + file, filepath + '/' + extension + '/' + file)
