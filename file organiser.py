@@ -2,19 +2,14 @@ from tkinter import Tk,Label,Button,filedialog
 import os
 import shutil
 
-
 root = Tk()
 root.title("File Organiser")
 root.geometry('400x300')
 root.resizable(False, False)
-
 #front level
 lvl = Label(root,text='Welcome to File Orgsniser',background='#717fad',font=2)
 lvl.pack()
 root.config(background='#717fad')
-
-
-
 def openFile(): # Function
     global filepath
     filepath = filedialog.askdirectory()
@@ -37,8 +32,6 @@ def startmanaging():
         else:
             os.makedirs(filepath + '/' + extension)
             shutil.move(filepath + '/' + file, filepath + '/' + extension + '/' + file)
-
-
 #button type 1
 btn1 = Button(root,text="Browse",background='#cad5fa',command=openFile)
 btn1.place(x=170,y=70)
