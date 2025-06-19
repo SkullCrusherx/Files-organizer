@@ -1,24 +1,29 @@
-from tkinter import Tk,Label,Button,filedialog
+from tkinter import Tk,Label,Button,filedialog,Entry
 import os
 import shutil
 
 root = Tk()
 root.title("File Organiser")
-root.geometry('400x300')
+root.geometry('250x170')
 root.resizable(False, False)
+
 #front level
-lvl = Label(root,text='Welcome to File Orgsniser',background='#717fad',font=2)
+lvl = Label(root,text='Welcome to File Orgsniser',background='#717fad',font=("arial",13,'bold'))
 lvl.pack()
 root.config(background='#717fad')
+
+
 def openFile(): # Function
     global filepath
     filepath = filedialog.askdirectory()
     global files
+    global lvl2
     files = os.listdir(filepath)
-    lvl1 = Label(root,text = filepath)
-    lvl1.place(x=60,y=100)
-    lvl2 = Label(root,text = "Ready To Start!")
-    lvl2.place(x=160,y=130)
+    lvl1 = Entry(root,text = filepath,background='#717fad')
+    lvl1.place(x=100,y=70)
+    
+    lvl2 = Label(root,text = "Ready To Start!",background='#717fad')
+    lvl2.place(x=100,y=130)
 
 def startmanaging():
     for file in files:
@@ -27,17 +32,17 @@ def startmanaging():
 
         if os.path.exists(filepath + '/' + extension):
             shutil.move(filepath + '/' + file, filepath + '/' + extension + '/' + file)
-            lvl3 = Label(root,text = "Done!")
-            lvl3.place(x=180,y=130)
+            lvl2.config(text='Done')
+
         else:
             os.makedirs(filepath + '/' + extension)
             shutil.move(filepath + '/' + file, filepath + '/' + extension + '/' + file)
 #button type 1
 btn1 = Button(root,text="Browse",background='#cad5fa',command=openFile)
-btn1.place(x=170,y=70)
+btn1.place(x=100,y=40)
 
 #button type 2
 btn = Button(root,text="start",background='#cad5fa',command = startmanaging)
-btn.place(x=170,y=200)
+btn.place(x=100,y=100)
 
 root.mainloop()
