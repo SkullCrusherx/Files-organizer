@@ -28,7 +28,7 @@ Tkinter (usually bundled with Python; installable via OS package manager if miss
 
 🔧 Installation
 bash
-git clone https://github.com/yourusername/file-organizer-gui.git
+git clone https://github.com/SkullCrusherx/Files-organizer.git
 cd file-organizer-gui
 python organizer.py
 🖱️ Usage
