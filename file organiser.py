@@ -44,7 +44,7 @@ btn1.place(x=100,y=40)
 #button type 2
 btn = Button(root,text="START",background='#691706',command = start_managing,font=("arial",10,"bold"),width=7,fg="white")
 btn.place(x=100,y=105)
-pr('help')
+print('help')
 
 root.mainloop()
 
