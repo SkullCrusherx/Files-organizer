@@ -11,7 +11,7 @@ Organize files by extension (e.g., .jpg, .pdf, .mp4)
 Supports keyword-based file sorting
 
 Optional subfolder creation by date or type
-
+ 
 Lightweight and cross-platform
 
 Designed with threading for smooth UI during operations
