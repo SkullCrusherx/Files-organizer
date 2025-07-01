@@ -1,7 +1,7 @@
 🗂️ File Organizer GUI
 A simple yet powerful file organizer built with Python, Tkinter, and OS module, designed to help you declutter your folders with ease. Move files into folders based on extension, keyword, or custom rules—all from a user-friendly interface. 
 
-<!-- Optional: replace with actual image path -->
+<!-- Optional: replace with actual image path --> 
 
 🚀 Features
 Graphical User Interface using Tkinter
